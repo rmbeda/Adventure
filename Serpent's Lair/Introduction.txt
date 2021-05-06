@@ -1,0 +1,2 @@
+Hello! Welcome to the Serpent's Lair.
+To begin the game, enter the text, 'Begin'. To exit the program now, enter any other word. Once the game has started, you may exit at any time by entering the text, 'exit'. If you do so, NO progress will be saved.
