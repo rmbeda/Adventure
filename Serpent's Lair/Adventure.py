@@ -111,10 +111,12 @@ begin_options = ['Begin']      # Words players can use to begin the game
 exit_options = ['exit', 'Exit'] # Words players can use to quit the game
 
 game_title = 'The Serpent\'s Lair' # Title of your story
-first_message = 'Hello! Welcome to {}'.format(game_title) # Welcome message for players
+first_message = 'Hello! Welcome to {}'.format(game_title) 
+# ^ Welcome message for players
 completion_message = 'Thank you for completing {}'.format(game_title) 
-# Message when players complete the game
-quit_message = 'Thanks for playing.' # Message when players quit in the middle of a game
+# ^ Message when players complete the game
+quit_message = 'Thanks for playing.'
+ # ^ Message when players quit in the middle of a game
 
 # That's all the constants to set.
 ######
@@ -151,9 +153,10 @@ while start:
 			moved = 1
 			start = 0
 		else:
-			line()
-			print('That strand of fate is not accessible at this juncture. Select a different path.')
-			line()
+			sep()
+			print('That strand of fate is not accessible at this juncture. ' +\
+                              'Select a different path.')     
+			sep()
 if complete:
 	x = input('Enter your parting words: ')
 	sep_print(completion_message)
