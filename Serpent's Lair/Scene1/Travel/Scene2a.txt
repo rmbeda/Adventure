@@ -1,0 +1,3 @@
+You continue following the crumbling road as it winds between hillsides bald of all except stubbly grass and decaying pasture fenceposts. All slowly drifts into the appearance of shadow as the night quietly pulls its veil over the land. Eventually, a small lamp in the distance appears, the only complement to your own small torch to be seen for miles in any direction. Upon approaching the lamplit roadside hovel, you discern a leather-jacketed figure labouring over a stump before the front door. Their back is turned.
+To greet the stranger, enter the text, 'From'.
+To continue on your way without disturbing them, enter the text, 'To'.

@@ -1,0 +1,4 @@
+You examine the passive, cold, crumbling figures that adorn this part of the road. As darkness falls, their figures seem to shift as the shadows that they cast lengthen. A whisper of an ancient legend stirs in your mind: of stone giants and their mighty crafts in the days before the Second Fall.
+
+To camp for the night among the ruins, enter the text, 'Of'.
+To continue journeying through the night, enter the text, 'Over'.
