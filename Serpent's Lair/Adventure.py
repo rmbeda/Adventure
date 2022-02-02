@@ -72,6 +72,12 @@ def sep():
 	print(' ')
 	return None
 
+def sep_print(statement):
+	sep()
+	partition()
+	print(statement)
+	return None
+
 def partition():
 	print('#'*20)
 	return None
@@ -92,11 +98,14 @@ def read(filename):
 	f.close()
 	return None
 
-def sep_print(statement):
-	sep()
-	partition()
-	print(statement)
-	return None
+def take_input(message, loi):
+    taken = input(message)
+    if taken in loi:
+        return taken
+    else:
+        sep_print('That strand of fate is not accessible at this juncture. ' +\
+                  'Select a different path.')
+        return take_input(message, loi)
 
 
 #########
@@ -133,29 +142,25 @@ if entry in begin_options:
 	start = 1
 
 while start:
-	contents = os.listdir(os.getcwd())
-	for thing in contents:
-		if thing[-4:]=='.txt':
-			read(thing)
-			if thing[:3]=='End':
-				moved = 1
-				start = 0
-				complete = 1
-			else:
-				moved = 0
-	while not moved:
-		move = input()
-		if move in contents:
-			os.chdir(move)
-			moved = 1
-		elif move in exit_options:
-			moved = 1
-			start = 0
-		else:
-			sep()
-			print('That strand of fate is not accessible at this juncture. ' +\
-                              'Select a different path.')     
-			sep()
+    contents = os.listdir(os.getcwd())
+    contents.remove('.DS_Store')
+    for thing in contents:
+        if thing[-4:]=='.txt':
+            read(thing)
+            if thing[:3]=='End':
+                moved = 1
+                start = 0
+                complete = 1
+            else:
+                moved = 0
+        if '.' in thing:
+            contents.remove(thing)
+    if not moved:
+        move = take_input('', contents+exit_options)
+        if move in exit_options:
+            start = 0
+        else:
+            os.chdir(move)
 if complete:
 	x = input('Enter your parting words: ')
 	sep_print(completion_message)
