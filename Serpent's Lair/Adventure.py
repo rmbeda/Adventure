@@ -90,7 +90,6 @@ def read(filename):
 		else:
 			print(line)
 	f.close()
-	sep()
 	return None
 
 def sep_print(statement):
