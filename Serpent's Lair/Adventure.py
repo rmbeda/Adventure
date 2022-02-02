@@ -1,5 +1,5 @@
 # Author Robert Beda
-# Last edited Wednesday, May 6, 2021
+# Last edited Wednesday, February 2, 2022
 # Use Python 3.7
 
 # How to use - Player:
@@ -72,17 +72,23 @@ def sep():
 	print(' ')
 	return None
 
+def partition():
+	print('#'*20)
+	return None
+
 def sep_print(statement):
 	sep()
 	partition()
 	print(statement)
 	return None
 
-def partition():
-	print('#'*20)
-	return None
-
 def read(filename):
+	'''Prints the contents of a given txt file in the cwd, line by line.
+    Arguments:
+    filename -- String representing the name of the file to be read.
+    
+    Returns:
+    None'''
 	sep()
 	partition()
 	f = open(filename, 'r')
@@ -99,6 +105,13 @@ def read(filename):
 	return None
 
 def take_input(message, loi):
+	'''Takes an input from a given list of acceptable inputs.
+    Arguments:
+    message -- String representing a message for the user.
+    loi -- List of strings, each representing an acceptable user input.
+    
+    Returns: 
+    The first user input that can be found in loi.'''
     taken = input(message)
     if taken in loi:
         return taken
